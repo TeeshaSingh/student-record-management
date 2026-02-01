@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Record Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>🎓 Student Record Management</h1>
+
+    <!-- Dashboard -->
+    <div class="dashboard">
+      <div class="card">Total Students: <span id="total">0</span></div>
+      <div class="card">Average Marks: <span id="average">0</span></div>
+      <div class="card">Top Score: <span id="top">0</span></div>
+    </div>
+
+    <!-- Form -->
+    <div class="form">
+      <input type="number" id="roll" placeholder="Roll Number">
+      <input type="text" id="name" placeholder="Student Name">
+      <input type="text" id="dept" placeholder="Department">
+      <input type="number" id="marks" placeholder="Marks">
+      <button onclick="addStudent()">Add Student</button>
+    </div>
+
+    <!-- Search & Sort -->
+    <div class="controls">
+      <input type="text" id="search" placeholder="Search..." onkeyup="searchStudent()">
+      <button onclick="sortByMarks()">Sort by Marks</button>
+      <button onclick="sortByName()">Sort by Name</button>
+    </div>
+
+    <!-- Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Roll</th>
+          <th>Name</th>
+          <th>Dept</th>
+          <th>Marks</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
